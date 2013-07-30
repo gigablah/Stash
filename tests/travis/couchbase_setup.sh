@@ -28,7 +28,7 @@ echo "*******************************"
 echo ""
 echo ""
 echo "Downloading..."
-git clone git://github.com/couchbase/php-ext-couchbase.git
+git clone git://github.com/gigablah/php-ext-couchbase.git
 echo "Configuring..."
 cd php-ext-couchbase
 phpize
