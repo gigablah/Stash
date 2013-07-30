@@ -21,7 +21,7 @@ class CouchbaseTest extends AbstractDriverTest
 
     protected function getOptions() {
         $options = parent::getOptions();
-        $couchbaseOptions = array('bucket' => 'test', 'servers' => array('127.0.0.1:11212'));
+        $couchbaseOptions = array('bucket' => 'test', 'servers' => array('127.0.0.1:8091'));
 
         return array_merge($options, $couchbaseOptions);
     }
