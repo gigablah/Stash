@@ -27,6 +27,7 @@ class Drivers
     protected static $drivers = array('Apc' => '\Stash\Driver\Apc',
                                        'BlackHole' => '\Stash\Driver\BlackHole',
                                        'Composite' => '\Stash\Driver\Composite',
+                                       'Couchbase' => '\Stash\Driver\Couchbase',
                                        'Ephemeral' => '\Stash\Driver\Ephemeral',
                                        'FileSystem' => '\Stash\Driver\FileSystem',
                                        'Memcache' => '\Stash\Driver\Memcache',
