@@ -18,7 +18,7 @@ sudo dpkg -i couchbase-server-enterprise_x86_64_2.0.1.deb
 sudo service couchbase-server start
 echo "Creating bucket..."
 /opt/couchbase/bin/couchbase-cli cluster-init -c 127.0.0.1:8091 --cluster-init-username=Administrator --cluster-init-password=password --cluster-init-ramsize=256
-curl -X POST -u Administrator:password -d authType=none -d proxyPort=11215 -d bucketType=couchbase -d name=test -d flushEnabled=1 -d ramQuotaMB=100 -d replicaNumber=1 http://127.0.0.1:8091/pools/default/buckets
+curl -X POST -u Administrator:password -d authType=sasl -d saslPassword=password -d bucketType=couchbase -d name=test -d flushEnabled=1 -d ramQuotaMB=100 -d replicaNumber=1 http://127.0.0.1:8091/pools/default/buckets
 # /opt/couchbase/bin/couchbase-cli bucket-create -c 127.0.0.1:8091 --bucket=test --bucket-type=couchbase --bucket-ramsize=100 --bucket-replica=0 --enable-flush=1 -u Administrator -p password
 echo "Finished installing couchbase server."
 echo ""
